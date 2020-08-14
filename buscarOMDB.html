@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscando en OMDB</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" media="screen" href="css/normalize.css" />
+    <link type="text/css" rel="stylesheet" media="screen" href="css/styles.css" />
+    <link type="text/css" rel="stylesheet" media="screen" href="css/fontello.css" />
+</head>
+<body>
+    <main class="container">
+        <div id="identificado" class="identificado"><span class="icon-user"></span></div>
+        <h1>Practica 2: Api OMDB</h1>
+        <div id="containerBuscador" class="container containerBuscador radius5 sombra">
+            <div class="gridBuscador">
+                <div class="gridBuscador__pelis radius5 sombra">
+                    <div id="camposBuscar" >
+                        <form id="frmParamBuscar" class="frmParamBuscar fondocabeceras radius5arriba">
+                          <div>
+                            <label for="title">T&iacute;tulo:</label>
+                            <input class="campo" type="text" name="titleBuscar" id="titleBuscar">
+                          </div>
+                          <div>
+                            <label for="year">A&ntilde;o:</label>
+                            <input class="campo" type="text" name="yearBuscar"  id="yearBuscar" maxlength="4">
+                          </div>
+                          
+                          <div>
+                              <input id="btnBuscar" class="btn radius5" type="button" value="Buscar">
+                              <input id="paginaMostrada" class="oculto" type="text" value="1">
+                          </div>
+                        </form>
+                      </div>
+
+                      <div id="ResultadoBusquedaPelis" class="gridBuscador__ResultadoBusquedaPelis">           
+                          <h2 class="avisoBuscar">Seleccione una pel&iacute;cula de Favoritos <span class='icon-heart'></span><br/>o<br/>realice una b&uacute;squeda por t&iacute;tulo / a&ntilde;o.</h2>
+                      </div>
+                </div>
+                <div class="gridBuscador__fav radius5 sombra">
+                    <div class="fondocabeceras fondocabecerasFav radius5arriba">
+                        Sus Favoritos <span class='icon-heart'></span>
+                    </div>
+                    <div id="ResultadoBusquedaFavoritos">
+                    </div>
+
+                    <p id="sinFavoritos"><img src="img/SinFavoritos.png" alt="No tiene ningúna pelicula en Favoritos"/></p>
+                </div>
+            </div>
+
+        </div>    
+
+    </main>
+    <script src="js/buscar.js"></script>
+</body>
+</html>
